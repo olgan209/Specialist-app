@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="top-panel">
+        <img src="logo.png" class="logo">
+
+        <div class="top-icons">
+            <img src="en-flag.jpg" class="flag">
+            <!-- <img src="user.png" class="user-icon"> -->
+        </div>
+    </div>
+
+    <h1 class="title">ALA-TOO INTERNATIONAL<br>UNIVERSITY</h1>
+
+    <div class="form-box">
+        <label>Login</label>
+        <input id="id" class="input" placeholder="Enter your login">
+
+        <label>Password</label>
+        <div class="password-row">
+            <input id="password" type="password" class="input" placeholder="Enter your Password">
+            <a href="#" class="forgot">Forgot Password</a>
+        </div>
+
+        <button onclick="login()" class="login-btn">Log On</button>
+
+        <p id="error" class="error-text"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
