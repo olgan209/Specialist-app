@@ -3,6 +3,19 @@
     "login": "Логин",
     "password": "Пароль",
     "buttonLogin": "Войти",
-    "success": "Ура! Вы успешно вошли!"
+    "success": "Ура! Вы успешно вошли!",
+  
+    "menuDashboard": "Главная",
+    "requests": "Запросы",
+    "queue": "В очереди",
+    "inProgress": "В процессе",
+    "completed": "Завершено",
+  
+    "dashboardTitle": "Главная страница",
+    "visitor": "Кто пришёл",
+    "studentId": "ID студента",
+    "category": "Категория",
+    "status": "Статус",
+    "action": "Действие"
   }
   

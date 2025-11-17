@@ -11,49 +11,72 @@
 
     <!-- Header -->
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ala-Too_International_University_logo.png/600px-Ala-Too_International_University_logo.png" class="logo">
+        <img src="logo.png" class="logo">
 
         <h1 class="title" data-translate="title">ALA-TOO INTERNATIONAL UNIVERSITY</h1>
 
         <div class="lang-dropdown">
-            <img src="https://flagcdn.com/w40/us.png" id="current-flag" class="flag">
+            <img src="en-flag.jpg" id="current-flag" class="flag">
 
             <div class="dropdown-content">
                 <div onclick="setLanguage('en')">
-                    <img src="https://flagcdn.com/w40/us.png"> English
+                    <img src="en-flag.jpg"> English
                 </div>
                 <div onclick="setLanguage('ru')">
-                    <img src="https://flagcdn.com/w40/ru.png"> Русский
+                    <img src="ru-flag.jpg"> Русский
                 </div>
                 <div onclick="setLanguage('kg')">
-                    <img src="https://flagcdn.com/w40/kg.png"> Кыргызча
+                    <img src="kg-flag.png"> Кыргызча
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Login Box -->
     <div class="login-box">
 
         <label data-translate="loginLabel">Login</label>
-        <input type="text" placeholder="Enter your login" name="id" id="login">
+        <input type="text" id="login" placeholder="Enter your login">
 
         <div class="password-row">
             <label data-translate="passwordLabel">Password</label>
             <a href="#" class="forgot" data-translate="forgot">Forgot Password</a>
         </div>
 
-        <input type="password" placeholder="Enter your Password" name="password" id="password">
+        <input type="password" id="password" placeholder="Enter your password">
 
         <button class="btn" onclick="submitLogin()" data-translate="loginButton">Log On</button>
+
+        <p id="error" style="color:red; margin-top:10px;"></p>
+
     </div>
 
 </div>
 
 <script src="lang.js"></script>
+
 <script>
-function submitLogin() {
-    document.querySelector("form")?.submit();
+async function submitLogin() {
+    const specialist_id = document.getElementById("login").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!specialist_id || !password) {
+        document.getElementById("error").innerText = "Fill all fields";
+        return;
+    }
+
+    const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ specialist_id, password })
+    });
+
+    const data = await response.json();
+
+    if (data.message === "success") {
+        window.location.href = "/dashboard.html";
+    } else {
+        document.getElementById("error").innerText = data.error;
+    }
 }
 </script>
 

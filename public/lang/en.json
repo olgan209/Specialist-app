@@ -3,6 +3,19 @@
     "login": "Login",
     "password": "Password",
     "buttonLogin": "Sign In",
-    "success": "Success! You have logged in!"
+    "success": "Success! You have logged in!",
+  
+    "menuDashboard": "Dashboard",
+    "requests": "Requests",
+    "queue": "Queue",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+  
+    "dashboardTitle": "Dashboard",
+    "visitor": "Visitor",
+    "studentId": "Student ID",
+    "category": "Category",
+    "status": "Status",
+    "action": "Action"
   }
   

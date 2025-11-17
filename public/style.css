@@ -85,7 +85,8 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 50%;
+    /* margin: 0 auto 24px auto; */
     padding: 14px;
     margin-bottom: 25px;
     border: none;
@@ -106,7 +107,9 @@ input {
 }
 
 .btn {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
     background: #4a8bff;
     border: none;
     padding: 15px;

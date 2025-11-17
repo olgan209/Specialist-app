@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-translate="dashboard">Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">AIU</h2>
+
+        <div class="menu-item active" data-page="dashboard">
+            <span data-translate="menuDashboard">Dashboard</span>
+        </div>
+
+        <h3 class="section-title" data-translate="requests">Requests</h3>
+
+        <div class="menu-item" data-page="queue">
+            <span data-translate="queue">Queue</span>
+        </div>
+
+        <div class="menu-item" data-page="inprogress">
+            <span data-translate="inProgress">In Progress</span>
+        </div>
+
+        <div class="menu-item" data-page="completed">
+            <span data-translate="completed">Completed</span>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- Language selector -->
+        <div class="lang-dropdown">
+            <img src="/flags/en.png" id="current-flag" class="flag">
+            <div class="dropdown-content">
+                <div onclick="setLanguage('en')"><img src="/flags/en.png"> English</div>
+                <div onclick="setLanguage('ru')"><img src="/flags/ru.png"> Русский</div>
+                <div onclick="setLanguage('kg')"><img src="/flags/kg.png"> Кыргызча</div>
+            </div>
+        </div>
+
+        <h1 data-translate="dashboardTitle">Dashboard</h1>
+
+        <!-- TABLE -->
+        <table class="ticket-table">
+            <thead>
+                <tr>
+                    <th data-translate="visitor">Visitor</th>
+                    <th data-translate="studentId">Student ID</th>
+                    <th data-translate="category">Category</th>
+                    <th data-translate="status">Status</th>
+                    <th data-translate="action">Action</th>
+                </tr>
+            </thead>
+            <tbody id="ticket-body">
+                <!-- Rows will be inserted via JS -->
+            </tbody>
+        </table>
+
+    </main>
+</div>
+
+<script src="lang.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

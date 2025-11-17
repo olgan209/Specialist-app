@@ -1,8 +1,21 @@
 {
-    "title": "Адис кируу",
+    "title": "Адис кирүү",
     "login": "Логин",
     "password": "Пароль",
     "buttonLogin": "Кирүү",
-    "success": "Куттуктайм! Сиз ийгиликтүү кирдиңиз!"
+    "success": "Куттуктайм! Сиз ийгиликтүү кирдиңиз!",
+  
+    "menuDashboard": "Башкы бет",
+    "requests": "Сурамдар",
+    "queue": "Кезекте",
+    "inProgress": "Иштөөдө",
+    "completed": "Аякталды",
+  
+    "dashboardTitle": "Башкы бет",
+    "visitor": "Ким келди",
+    "studentId": "Студент ID",
+    "category": "Категория",
+    "status": "Статус",
+    "action": "Аракет"
   }
   
