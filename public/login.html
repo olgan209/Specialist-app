@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Login</title>
-
+    <meta charset="UTF-8">
+    <title data-translate="title">ALA-TOO INTERNATIONAL UNIVERSITY</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="login-container">
+<div class="container">
 
-    <div class="top-panel">
-        <img src="logo.png" class="logo">
+    <!-- Header -->
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ala-Too_International_University_logo.png/600px-Ala-Too_International_University_logo.png" class="logo">
 
-        <div class="top-icons">
-            <img src="en-flag.jpg" class="flag">
-            <!-- <img src="user.png" class="user-icon"> -->
+        <h1 class="title" data-translate="title">ALA-TOO INTERNATIONAL UNIVERSITY</h1>
+
+        <div class="lang-dropdown">
+            <img src="https://flagcdn.com/w40/us.png" id="current-flag" class="flag">
+
+            <div class="dropdown-content">
+                <div onclick="setLanguage('en')">
+                    <img src="https://flagcdn.com/w40/us.png"> English
+                </div>
+                <div onclick="setLanguage('ru')">
+                    <img src="https://flagcdn.com/w40/ru.png"> Русский
+                </div>
+                <div onclick="setLanguage('kg')">
+                    <img src="https://flagcdn.com/w40/kg.png"> Кыргызча
+                </div>
+            </div>
         </div>
     </div>
 
-    <h1 class="title">ALA-TOO INTERNATIONAL<br>UNIVERSITY</h1>
+    <!-- Login Box -->
+    <div class="login-box">
 
-    <div class="form-box">
-        <label>Login</label>
-        <input id="id" class="input" placeholder="Enter your login">
+        <label data-translate="loginLabel">Login</label>
+        <input type="text" placeholder="Enter your login" name="id" id="login">
 
-        <label>Password</label>
         <div class="password-row">
-            <input id="password" type="password" class="input" placeholder="Enter your Password">
-            <a href="#" class="forgot">Forgot Password</a>
+            <label data-translate="passwordLabel">Password</label>
+            <a href="#" class="forgot" data-translate="forgot">Forgot Password</a>
         </div>
 
-        <button onclick="login()" class="login-btn">Log On</button>
+        <input type="password" placeholder="Enter your Password" name="password" id="password">
 
-        <p id="error" class="error-text"></p>
+        <button class="btn" onclick="submitLogin()" data-translate="loginButton">Log On</button>
     </div>
 
 </div>
 
-<script src="script.js"></script>
+<script src="lang.js"></script>
+<script>
+function submitLogin() {
+    document.querySelector("form")?.submit();
+}
+</script>
 
 </body>
 </html>

@@ -1,100 +1,121 @@
 body {
     margin: 0;
     padding: 0;
-    background: #f1f1f1;
+    background: #f2f2f2;
     font-family: Arial, sans-serif;
 }
 
-.login-container {
-    width: 850px;
-    margin: 40px auto;
-    padding: 40px;
-    background: #0c0a2d;
-    border-radius: 8px;
+.container {
+    width: 900px;
+    margin: 50px auto;
+    background: #07072d;
+    padding: 40px 50px;
+    border-radius: 6px;
     color: white;
 }
 
-.top-panel {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    width: 120px;
-}
-
-.top-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.flag {
-    width: 40px;
-    border-radius: 5px;
-}
-
-.user-icon {
-    width: 45px;
+    width: 90px;
 }
 
 .title {
     text-align: center;
-    margin-top: 10px;
     font-size: 26px;
-    font-weight: 700;
     letter-spacing: 1px;
+    width: 100%;
 }
 
-.form-box {
-    margin-top: 30px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.flag {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    color: black;
+    min-width: 140px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content div:hover {
+    background: #ececec;
+}
+
+.dropdown-content img {
+    width: 22px;
+    margin-right: 8px;
+}
+
+.lang-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.login-box {
+    margin-top: 40px;
 }
 
 label {
-    font-size: 17px;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-.input {
+input {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0 20px;
+    padding: 14px;
+    margin-bottom: 25px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
 }
 
 .password-row {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .forgot {
-    position: absolute;
-    right: 10px;
-    top: 14px;
-    font-size: 13px;
     color: #ccc;
+    font-size: 14px;
     text-decoration: none;
 }
 
-.login-btn {
+.btn {
     width: 100%;
-    padding: 15px;
-    background: #4d8dfc;
+    background: #4a8bff;
     border: none;
-    border-radius: 10px;
+    padding: 15px;
     color: white;
     font-size: 18px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.login-btn:hover {
-    background: #2f6bed;
-}
-
-.error-text {
-    color: #ff4c4c;
-    margin-top: 10px;
+.btn:hover {
+    background: #3a76dd;
 }
